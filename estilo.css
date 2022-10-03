@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html{
     cursor: url(imagens/mata_mosquito.png) 30 30, auto;
 }

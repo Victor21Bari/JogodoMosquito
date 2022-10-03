@@ -8,12 +8,12 @@ let criaTempo = 1500;
 let difi = window.location.search;
 difi = difi.replace('?', '');
 
-if (difi === 'normal') {
+if (difi === 'facil') {
     criaTempo = 1500;
 } else if (difi === 'dificil') {
     criaTempo = 1000
     tempo = 8
-} else if(difi === 'dd'){
+} else if (difi === 'dd') {
     criaTempo = 800;
     tempo = 4
 }
@@ -52,16 +52,16 @@ function posicaoRandomica() {
 
     let posicaoX = Math.floor(Math.random() * largura) - 90;
     let posicaoY = Math.floor(Math.random() * altura) - 90;
-    posicaoX = posicaoX < 0 ? 0 : posicaoX;
-    posicaoY = posicaoY < 0 ? 0 : posicaoY;
+    let posiX = posicaoX < 0 ? 0 : posicaoX;
+    let posiY = posicaoY < 0 ? 0 : posicaoY;
     console.log(posicaoX, posicaoY);
 
     //criar o elemnto html
     let mosquito = document.createElement('img');
     mosquito.src = 'imagens/mosquito.png';
     mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio();
-    mosquito.style.left = posicaoX + 'px';
-    mosquito.style.top = posicaoY + 'px';
+    mosquito.style.left = posiX + 'px';
+    mosquito.style.top = posiY + 'px';
     mosquito.style.position = 'absolute';
     document.body.appendChild(mosquito);
     mosquito.id = 'mosquito';
@@ -96,4 +96,3 @@ function ladoAleatorio() {
 
     }
 }
-

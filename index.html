@@ -12,6 +12,7 @@
     
     
     <title>Jogo do Mosquito</title>
+     <!--index.html-->
     <script>
         function iniciarJogo() {
             let nivel = document.getElementById('nivel').value;
@@ -41,7 +42,7 @@
                     <div class="mb-2">
                         <select class="form-control" id="nivel">
                             <option value="">--Selecionar Nível</option>
-                            <option value="Normal">Normal</option>
+                            <option value="facil">Normal</option>
                             <option value="dificil">difícil</option>
                             <option value="dd">Super difícil</option>
                         </select>
@@ -53,7 +54,7 @@
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger btn-lg " onclick="iniciarJogo()">Jogar agora</button>
+                    <button type="button" class="btn btn-primary btn-lg " onclick="iniciarJogo()">Jogar agora</button>
                 </div>
             </div>
         </div>
